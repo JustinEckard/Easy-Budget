@@ -16,6 +16,11 @@ class Envelope extends Model
         return $this->hasMany(Transaction::class);
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     // Method to calculate the total of all transactions
     public function updateTotal()
     {

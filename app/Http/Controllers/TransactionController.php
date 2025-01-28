@@ -45,7 +45,7 @@ class TransactionController extends Controller
         }
 
         Transaction::create([
-            'user_id' => 1, // Authenticated users
+            'user_id' => auth()->id(), // Authenticated users
             'envelope_id' => $envelopeId,
             'title' => $request->title,
             'type' => $request->type,
@@ -57,7 +57,7 @@ class TransactionController extends Controller
         $envelope = Envelope::findOrFail($envelopeId);
         $envelope->updateTotal();
 
-        $user = User::findOrFail(1);
+        $user = User::findOrFail(auth()->id());
         $user->updateTotal();
 
         return back()->with('success', 'Transaction added successfully.');

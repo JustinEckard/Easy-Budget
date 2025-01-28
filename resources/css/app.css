@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-slate-300;
+}
+
+.container  {
+    @apply max-w-[1200px] mx-auto px-10
+}
