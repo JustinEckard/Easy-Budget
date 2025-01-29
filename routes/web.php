@@ -7,7 +7,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 
-
+Route::redirect('/', '/login');
 
 // Show the login form
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('auth.login.form');
