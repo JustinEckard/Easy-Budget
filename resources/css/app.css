@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-gray-700 text-white;
+}
+
+.container  {
+    @apply max-w-[1200px] mx-auto
+}
+
+h1 {
+    @apply text-2xl text-green-600 font-bold;
+}
+
+h2 {
+    @apply text-xl text-green-400 font-bold;
+}
+
+h3 {
+    @apply text-lg text-green-300 font-bold;
+}
+
+
+button {
+    @apply bg-green-600 px-10 py-2 rounded-lg max-h-12;
+}
+
+input , select ,textarea{
+    @apply !rounded-lg text-gray-900;
+}
+
+label {
+    @apply  inline-block pb-2;
+}
